@@ -1,331 +1,337 @@
-## Core latex/pdflatex auxiliary files:
+# ============================================================
+# Inverter-Project
+# Power Electronics II
+#
+# Ignore generated, temporary and local files.
+# Keep source files, simulations, PCB designs, measurements
+# and final engineering deliverables under version control.
+# ============================================================
+
+
+# ============================================================
+# LaTeX
+# ============================================================
+
+# Auxiliary files
 *.aux
-*.lof
 *.log
-*.lot
-*.fls
 *.out
 *.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
-.*.lb
-
-## Intermediate documents:
-*.dvi
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
 *.xdv
-*-converted-to.*
-# these rules might exclude image files for figures etc.
-# *.ps
-# *.eps
-# *.pdf
 
-## Generated if empty string is given at "Please type another file name for output:"
-.pdf
-
-## Bibliography auxiliary files (bibtex/biblatex/biber):
+# Bibliography
 *.bbl
-*.bbl-SAVE-ERROR
 *.bcf
-*.bcf-SAVE-ERROR
 *.blg
-*-blx.aux
-*-blx.bib
 *.run.xml
 
-## Build tool auxiliary files:
-*.fdb_latexmk
-*.synctex
-*.synctex(busy)
-*.synctex.gz
-*.synctex.gz(busy)
-*.pdfsync
-*.rubbercache
-rubber.cache
-
-## Build tool directories for auxiliary files
-# latexrun
-latex.out/
-
-## Auxiliary and intermediate files from other packages:
-# algorithms
-*.alg
-*.loa
-
-# achemso
-acs-*.bib
-
-# amsthm
-*.thm
-
-# attachfile2
-*.atfi
-
-# beamer
-*.nav
-*.pre
-*.snm
-*.vrb
-
-# changes
-*.soc
-*.loc
-
-# comment
-*.cut
-
-# context
-*.tuc
-*.tui
-*.tuo
-
-# cprotect
-*.cpt
-
-# elsarticle (documentclass of Elsevier journals)
-*.spl
-
-# endnotes
-*.ent
-
-# fixme
-*.lox
-
-# feynmf/feynmp
-*.mf
-*.mp
-*.t[1-9]
-*.t[1-9][0-9]
-*.tfm
-
-#(r)(e)ledmac/(r)(e)ledpar
-*.end
-*.?end
-*.[1-9]
-*.[1-9][0-9]
-*.[1-9][0-9][0-9]
-*.[1-9]R
-*.[1-9][0-9]R
-*.[1-9][0-9][0-9]R
-*.eledsec[1-9]
-*.eledsec[1-9]R
-*.eledsec[1-9][0-9]
-*.eledsec[1-9][0-9]R
-*.eledsec[1-9][0-9][0-9]
-*.eledsec[1-9][0-9][0-9]R
-
-# glossaries
+# Index / glossary / nomenclature
 *.acn
 *.acr
+*.alg
 *.glg
-*.glg-abr
 *.glo
-*.glo-abr
 *.gls
-*.gls-abr
 *.glsdefs
-*.lzo
-*.lzs
-*.slg
-*.slo
-*.sls
-
-# uncomment this for glossaries-extra (will ignore makeindex's style files!)
-# *.ist
-
-# gnuplot
-*.gnuplot
-*.table
-
-# gnuplottex
-*-gnuplottex-*
-
-# gregoriotex
-*.gaux
-*.glog
-*.gtex
-
-# htlatex
-*.4ct
-*.4tc
-*.idv
-*.lg
-*.trc
-*.xref
-
-# hypdoc
-*.hd
-
-# hyperref
-*.brf
-
-# knitr
-*-concordance.tex
-# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
-# *.tikz
-*-tikzDictionary
-
-# latexindent will create succesive backup files by default
-#*.bak*
-
-# listings
-*.lol
-
-# luatexja-ruby
-*.ltjruby
-
-# makeidx
 *.idx
 *.ilg
 *.ind
-
-# minitoc
+*.ist
+*.loa
+*.lol
 *.maf
-*.mlf
-*.mlt
-*.mtc[0-9]*
-*.slf[0-9]*
-*.slt[0-9]*
-*.stc[0-9]*
-
-# minted
-_minted*
-*.data.minted
-*.pyg
-
-# morewrites
-*.mw
-
-# newpax
-*.newpax
-
-# nomencl
-*.nlg
+*.mtc
+*.mtc0
 *.nlo
 *.nls
+*.slf
+*.slt
+*.stc
 
-# pax
-*.pax
+# Beamer / presentation files
+*.nav
+*.snm
+*.vrb
 
-# pdfpcnotes
-*.pdfpc
+# LaTeX temporary folders
+_minted-*/
+latex.out/
+.build/
+build/
 
-# sagetex
-*.sagetex.sage
-*.sagetex.py
-*.sagetex.scmd
-
-# scrwfile
-*.wrt
-
-# spelling
-*.spell.bad
-*.spell.txt
-
-# svg
-svg-inkscape/
-
-# sympy
-*.sout
-*.sympy
-sympy-plots-for-*.tex/
-
-# pdfcomment
+# Temporary LaTeX files
+*.dvi
+*.ps
 *.upa
 *.upb
 
-# pythontex
-*.pytxcode
-pythontex-files-*/
 
-# tcolorbox
-*.listing
+# ============================================================
+# KiCad
+# ============================================================
 
-# thmtools
-*.loe
-
-# TikZ & PGF
-*.dpth
-*.md5
-*.auxlock
-
-# titletoc
-*.ptc
-
-# todonotes
-*.tdo
-
-# vhistory
-*.hst
-*.ver
-
-# easy-todo
-*.lod
-
-# xcolor
-*.xcp
-
-# xmpincl
-*.xmpi
-
-# xindy
-*.xdy
-
-# xypic precompiled matrices and outlines
-*.xyc
-*.xyd
-
-# endfloat
-*.ttt
-*.fff
-
-# Latexian
-TSWLatexianTemp*
-
-## Editors:
-# WinEdt
+# Automatic backups
+*-backups/
+_autosave-*
 *.bak
-*.sav
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.sch-bak
 
-# latexindent.pl
-*.bak[0-9]*
+# Lock files
+~*.lck
+*.kicad_pcb.lck
+*.kicad_sch.lck
 
-# Texpad
-.texpadtmp
+# Local / cache files
+*.kicad_prl
+fp-info-cache
 
-# LyX
-*.lyx~
+# Temporary editor files
+*.tmp
+*.swp
+*~
 
-# Kile
-*.backup
+# Router / intermediate files
+*.dsn
+*.ses
 
-# gummi
-.*.swp
 
-# KBibTeX
-*~[0-9]*
+# ============================================================
+# PLECS
+# ============================================================
 
-# TeXnicCenter
-*.tps
+# Keep PLECS models (*.plecs) tracked.
+# Ignore common backup / temporary files only.
 
-# auto folder when using emacs and auctex
-./auto/*
-*.el
+*.plecs~
+*.plecs.bak
+*.plecs.autosave
 
-# expex forward references with \gathertags
-*-tags.tex
+# Generated simulation / compilation directories
+plecs_codegen/
+codegen/
+generated/
 
-# standalone packages
-*.sta
 
-# Makeindex log files
-*.lpz
+# ============================================================
+# Firmware / Embedded development
+# ============================================================
 
-# xwatermark package
-*.xwm
+# Compilation outputs
+Debug/
+Release/
+debug/
+release/
 
-# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
-# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
-# Uncomment the next line to have this generated file ignored.
-#*Notes.bib
+*.o
+*.obj
+*.a
+*.lib
+*.elf
+*.hex
+*.bin
+
+# Dependency / intermediate files
+*.d
+*.dep
+
+# Linker / listing outputs
+*.lst
+
+# Generated dependency folders
+.deps/
+
+# CMake if used later
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+
+# ============================================================
+# Texas Instruments / Code Composer Studio
+# ============================================================
+
+# Eclipse / CCS local metadata
+.metadata/
+.settings/
+
+# CCS generated launch / debug files
+*.launch
+
+# Generated build outputs
+targetConfigs/*.ccxml.user
+
+
+# ============================================================
+# Python
+# ============================================================
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging
+dist/
+*.egg-info/
+.eggs/
+
+# Test / analysis caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# ============================================================
+# MATLAB
+# ============================================================
+
+*.asv
+*.m~
+*.mex*
+*.slxc
+slprj/
+codegen/
+
+
+# ============================================================
+# Measurement / data processing temporary files
+# ============================================================
+
+# Temporary exports
+*.tmp.csv
+*.temp.csv
+
+# Spreadsheet temporary files
+~$*.xlsx
+~$*.xls
+~$*.csv
+
+
+# ============================================================
+# VS Code
+# ============================================================
+
+# Local VS Code configuration
+.vscode/
+
+# Uncomment later if you decide to share common VS Code settings:
+# !.vscode/
+# .vscode/*
+# !.vscode/extensions.json
+# !.vscode/settings.json
+# !.vscode/tasks.json
+
+
+# ============================================================
+# JetBrains IDEs
+# ============================================================
+
+.idea/
+
+
+# ============================================================
+# Operating systems
+# ============================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+.directory
+.Trash-*/
+
+
+# ============================================================
+# Editors
+# ============================================================
+
+*.swp
+*.swo
+*.swn
+*~
+.#*
+\#*\#
+
+
+# ============================================================
+# Logs
+# ============================================================
+
+*.log
+logs/
+
+
+# ============================================================
+# Secrets / local environment variables
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+
+
+# ============================================================
+# Archives / temporary packages
+# ============================================================
+
+*.zip.tmp
+*.7z.tmp
+*.rar.tmp
+
+
+# ============================================================
+# IMPORTANT
+#
+# Intentionally NOT ignored:
+#
+# *.tex
+# *.bib
+# *.pdf
+# *.plecs
+# *.kicad_pro
+# *.kicad_sch
+# *.kicad_pcb
+# *.csv
+# *.xlsx
+# *.py
+# *.m
+# *.c
+# *.h
+# *.cpp
+# *.ger
+# *.gbr
+#
+# These may contain project sources, datasheets, measurements,
+# PCB files or final engineering deliverables.
+# ============================================================
