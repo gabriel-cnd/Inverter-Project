@@ -109,10 +109,30 @@ Les éventuelles extensions du système ne doivent être réalisées qu’après
 - **PCB assemblé et testé** ;
 - rapport de mesures sur le convertisseur opérationnel.
 
-## 8. Jalon critique
+## 8. Configuration étendue envisagée
+
+Le journal de projet mentionne une orientation vers une **application raccordée au réseau monophasé (grid-tied)**, avec une inductance de couplage. Il s'agit d'une **extension du projet** : la configuration de référence **source DC idéale + pont en H + filtre L + charge R** reste obligatoire et doit être validée en premier.
+
+Le raccordement au réseau exigerait un dimensionnement et une commande spécifiques, notamment une synchronisation adaptée, ainsi que les protections nécessaires. Cette orientation n'est pas une exigence supplémentaire imposée par la donnée officielle.
+
+## 9. Exigences spécifiques au premier rendu
+
+Selon la donnée du premier rendu, les éléments attendus comprennent :
+
+- la description de l'application choisie, des objectifs et du principe de fonctionnement ;
+- une **simulation en boucle ouverte sous PLECS** ;
+- la **sélection justifiée du transistor de puissance**, selon les contraintes électriques et thermiques ;
+- le **calcul des pertes** et le **dimensionnement du dissipateur thermique** ;
+- l'ajout d'un **modèle thermique PLECS** pour analyser la température de jonction ;
+- une **simulation offline** à partir du template RT-BOX adapté ;
+- une **simulation en boucle ouverte sur la RT-BOX**.
+
+La présence de fichiers PLECS dans le dépôt n'est pas, à elle seule, une preuve de validation de chacun de ces points.
+
+## 10. Jalon critique
 
 Le **PCB doit être finalisé et validé avant le 13 décembre 2026** afin de permettre le lancement de sa fabrication.
 
-## 9. Résumé
+## 11. Résumé
 
 > Concevoir et réaliser un onduleur monophasé en pont H de **1 kW**, alimenté sous **400 V DC** et fournissant **230 V RMS AC**, commandé à **40 kHz**, avec un **THD ≤ 2 %**, un filtre inductif, des protections complètes, un **PCB 4 couches** et un budget inférieur à **100 CHF**.
