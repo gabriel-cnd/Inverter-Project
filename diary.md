@@ -63,6 +63,20 @@ Ce choix est consigné dans le journal initial du 16 septembre. Il représente u
 - Mise à jour de la documentation en préparation.
 - **À confirmer :** commit et push sur `main`.
 
+### 2026-10-27 — Premier rendu et étude électrothermique
+
+- Finalisation du rapport du premier jalon, archivé dans `docs/rendus/01/`.
+- Choix documenté du MOSFET SiC **Wolfspeed C3M0060065D** (650 V, 60 mΩ, TO-247-3).
+- Ajout du modèle `HIL_04_Inverter_OpenLoop_MOSFET_Thermal.plecs` intégrant l'analyse des pertes et des températures.
+- Ajout du modèle de pertes PLECS et de la fiche constructeur dans `datasheets/`.
+- Les résultats du rapport restent des résultats de simulation offline tant qu'aucune preuve d'exécution sur la RT-BOX physique n'est fournie.
+
+### 2026-11-17 — Préparation du driver, du snubber et du PCB
+
+- Ajout du document pédagogique de dimensionnement du driver MOSFET et du snubber dans `docs/rendus/02/`.
+- Ajout des guides de conception KiCad dans `hardware/kicad/`.
+- Ces guides constituent des références de conception ; aucun schéma ni routage KiCad du convertisseur n'est encore présent dans le dépôt.
+
 ## 3. Sources
 
 ### Documents du projet
@@ -80,15 +94,15 @@ Ce choix est consigné dans le journal initial du 16 septembre. Il représente u
 - [ ] Vérifier et documenter **230 V RMS**, **1 kW**, ondulation du courant et **THD ≤ 2 %**.
 - [ ] Mesurer / documenter les conséquences des **temps morts** et le gain de la compensation.
 - [ ] Comparer objectivement les régulateurs **P et PR** en boucle fermée.
-- [ ] Justifier le choix du semi-conducteur et dimensionner son **refroidissement**.
-- [ ] Effectuer la **simulation thermique PLECS**.
+- [x] Justifier le choix du semi-conducteur **C3M0060065D** et effectuer un premier dimensionnement de son refroidissement.
+- [x] Effectuer et documenter une première **simulation thermique PLECS**.
 - [ ] Produire des preuves de simulation **offline** avec le template HIL.
 - [ ] Valider la commande en **temps réel sur RT-BOX**.
 - [ ] Définir, si l'extension réseau est poursuivie, la synchronisation et les protections requises.
 
 ## 5. Prochaines étapes
 
-1. Vérifier que tous les modèles sont correctement suivis dans Git.
-2. Documenter les essais et insérer les captures / graphiques dans le rapport.
-3. Compléter les livrables spécifiques du **premier rendu**.
-4. Poursuivre le dimensionnement du convertisseur et la préparation du PCB KiCad.
+1. Vérifier l'ouverture du modèle thermique portable sur une seconde installation PLECS.
+2. Valider la commande en temps réel sur la RT-BOX et archiver les preuves de mesure.
+3. Poursuivre le dimensionnement du driver, du snubber et des protections.
+4. Créer le schéma puis le PCB quatre couches sous KiCad avant le jalon du 13 décembre 2026.

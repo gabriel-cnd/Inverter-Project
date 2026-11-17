@@ -2,7 +2,7 @@
 
 Design, simulation, PCB development and experimental validation of a **1 kW single-phase H-bridge inverter** developed as part of the **Power Electronics II** course.
 
-> **Project status (October 2026):** PLECS simulation models have been developped for open-loop soperation, dead-time effects ans compensation, andclosed-loop voltage control with P and PR regulators. HIL-oriented models are also available. ** The presence of a model does not imply its performance ot real-time operation has been validated.** Harware designe and experimental validation are future project phases.  
+> **Project status (November 2026):** PLECS simulation models are available for open-loop operation, dead-time effects and compensation, closed-loop voltage control with P and PR regulators, and HIL-oriented electrothermal analysis. The first milestone report and supporting design documents are archived in the repository. The presence of a model does not by itself demonstrate successful real-time or experimental validation. Hardware design and experimental validation remain future project phases.
 
 ## Project Overview
 
@@ -63,6 +63,7 @@ Models in `simulations/HIL/`:
 | `HIL_01_Inverter_OpenLoop.plecs`                       | HIL-oriented open-loop model              |
 | `HIL_02_Inverter_OpenLoop_DeadTime.plecs`              | HIL-oriented dead-time model              |
 | `HIL_03_Inverter_OpenLoop_DeadTime_Compensation.plecs` | HIL-oriented dead-time compensation model |
+| `HIL_04_Inverter_OpenLoop_MOSFET_Thermal.plecs`        | HIL-oriented electrical and MOSFET thermal model |
 | `Template_TI_RT_Box.plecs`                             | Reference RT-BOX template                 |
 
 These files document **preparation for HIL**. Offline simulation and successful execution on the physical RT-BOX must be reported separately once demonstrated.
@@ -89,18 +90,17 @@ Verify the adapted controller and plant models with the RT-BOX, first offline us
 
 After safety checks, assemble the hardware and perform progressive, current-limited low-voltage tests before any nominal-voltage testing. Compare experimental results with simulation and design calculations.
 
-## First Milestone: Work to Document
+## First Milestone
 
-The first submission requires evidence of:
+The first submission and the corresponding report are archived under `docs/rendus/01/`. They cover:
 
-- [ ] application choice, objectives, specifications and converter operating principle;
-- [ ] open-loop PLECS simulation and relevant results;
-- [ ] selection and justification of a power semiconductor;
-- [ ] loss estimation, heatsink sizing and a PLECS thermal model;
-- [ ] offline simulation using the RT-BOX template;
-- [ ] open-loop real-time simulation on the RT-BOX.
+- application choice, objectives, specifications and converter operating principle;
+- open-loop PLECS simulation and relevant results;
+- selection and justification of the Wolfspeed `C3M0060065D` SiC MOSFET;
+- loss estimation, heatsink sizing and a PLECS thermal model;
+- preparation of the offline and HIL-oriented RT-BOX models.
 
-These boxes represent **documentation/validation still to be checked**, not a claim that the work has not been started.
+The report distinguishes offline results from real-time measurements; successful execution on the physical RT-BOX still requires separate evidence.
 
 ## Repository Structure
 
@@ -111,13 +111,14 @@ Inverter-Project/
 ├── diary.md
 ├── Mini_Project_conception_ELPU2.pdf
 ├── docs/
-│   └── report/                # LaTeX report, chapters and figures
+│   ├── report/                # LaTeX report workspace
+│   └── rendus/                # Milestone instructions and submitted reports
 ├── simulations/
 │   ├── plecs/                 # Offline PLECS models (01 to 05)
-│   ├── HIL/                   # RT-BOX-oriented models and template
+│   ├── HIL/                   # RT-BOX-oriented and thermal models, plus template
 │   ├── matlab/
 │   └── python/
-├── datasheets/
+├── datasheets/                # Selected MOSFET datasheet and PLECS loss model
 ├── hardware/
 │   ├── kicad/
 │   ├── bom/
@@ -147,5 +148,8 @@ Some directories are reserved for upcoming project phases and may currently be e
 - [Requirements and safety constraints](cdc.md)
 - [Project decisions and development log](diary.md)
 - [Official project description](Mini_Project_conception_ELPU2.pdf)
+- [First milestone documents](docs/rendus/01/)
+- [Driver and snubber design guide](docs/rendus/02/Mini_Projet_conception_ELPU2_driversnubber.pdf)
+- [Wolfspeed C3M0060065D datasheet](datasheets/Wolfspeed_C3M0060065D_datasheet.pdf)
 
 **Safety:** the project involves a nominal 400 V DC bus. Simulation files alone do not establish hardware safety or compliance. Experimental testing requires the project's specified electrical protections and supervised commissioning procedures.
