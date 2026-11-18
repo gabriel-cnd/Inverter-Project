@@ -106,3 +106,23 @@ Ce choix est consigné dans le journal initial du 16 septembre. Il représente u
 2. Valider la commande en temps réel sur la RT-BOX et archiver les preuves de mesure.
 3. Poursuivre le dimensionnement du driver, du snubber et des protections.
 4. Créer le schéma puis le PCB quatre couches sous KiCad avant le jalon du 13 décembre 2026.
+
+## 6. Suivi du deuxième rendu
+
+- [ ] Rappeler le cahier des charges
+- [ ] Définir l’architecture générale du pont en H
+- [ ] Choisir le driver de grille isolé
+- [ ] Calculer le courant de grille
+- [ ] Dimensionner les résistances de grille
+- [ ] Dimensionner les alimentations isolées des drivers
+- [ ] Définir le temps mort
+- [ ] Concevoir les protections
+- [ ] Dimensionner les snubbers RC
+- [ ] Sélectionner les composants commerciaux
+- [ ] Établir la nomenclature et vérifier le budget
+- [ ] Réaliser le schéma électrique sous KiCad
+- [ ] Vérifier le schéma avec l’ERC
+- [ ] Implanter et router le PCB quatre couches
+- [ ] Vérifier l’isolation, les boucles de commutation et la CEM
+- [ ] Valider la conception par simulation et mesures
+- [ ] Rédiger le rapport de dimensionnement
