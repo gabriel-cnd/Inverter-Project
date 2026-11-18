@@ -91,12 +91,12 @@ Ce choix est consigné dans le journal initial du 16 septembre. Il représente u
 ## 4. Points à clarifier et résultats à produire
 
 - [ ] Justifier l'intérêt du **grid-tied** et comparer avec la charge résistive de référence.
-- [ ] Vérifier et documenter **230 V RMS**, **1 kW**, ondulation du courant et **THD ≤ 2 %**.
+- [x] Vérifier et documenter **230 V RMS**, **1 kW**, ondulation du courant et **THD ≤ 2 %**.
 - [ ] Mesurer / documenter les conséquences des **temps morts** et le gain de la compensation.
 - [ ] Comparer objectivement les régulateurs **P et PR** en boucle fermée.
 - [x] Justifier le choix du semi-conducteur **C3M0060065D** et effectuer un premier dimensionnement de son refroidissement.
 - [x] Effectuer et documenter une première **simulation thermique PLECS**.
-- [ ] Produire des preuves de simulation **offline** avec le template HIL.
+- [x] Produire des preuves de simulation **offline** avec le template HIL.
 - [ ] Valider la commande en **temps réel sur RT-BOX**.
 - [ ] Définir, si l'extension réseau est poursuivie, la synchronisation et les protections requises.
 
@@ -109,8 +109,8 @@ Ce choix est consigné dans le journal initial du 16 septembre. Il représente u
 
 ## 6. Suivi du deuxième rendu
 
-- [ ] Rappeler le cahier des charges
-- [ ] Définir l’architecture générale du pont en H
+- [x] Rappeler le cahier des charges
+- [x] Définir l’architecture générale du pont en H
 - [ ] Choisir le driver de grille isolé
 - [ ] Calculer le courant de grille
 - [ ] Dimensionner les résistances de grille

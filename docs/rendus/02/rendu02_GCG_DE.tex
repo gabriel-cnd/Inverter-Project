@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEIG-VD / institut REDS
+%%
+%% Modèle Latex pour laboratoire
+%% 
+%% Fichiers à changer : 
+%%            - constantes.tex
+%%            - Tous les fichiers du corps du rapport 
+%%
+%% Auteur : MIM
+%% Date   : 27.09.2017
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Paramétrage du papier utilisé
+\documentclass[a4paper,12pt,oneside]{article}
+
+% Ne pas toucher, nécessaire à la mise en forme
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} % Nouvelle norme pour codage des caractères
+\usepackage{lmodern} % Nouvelle forme de la fonte ComputerModern
+\usepackage[provide=*,french]{babel} % Règles typographiques françaises, césures
+\usepackage{graphicx} % Insertion images
+\usepackage{epstopdf} % Convertir les images eps vers pdf
+\epstopdfsetup{outdir=./Images/converted_to_pdf/} % Dossier de sortie des images converties
+\pagenumbering{arabic}
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm, showframe=false]{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{color}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+% Package karnaugh-map inutilisé dans ce rapport.
+\usepackage{caption}
+\usepackage[table]{xcolor}
+\usepackage{multicol} 
+\usepackage{makecell}
+\usepackage{subcaption}
+
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{tikz}
+
+
+
+
+
+% fichier avec les constantes (à adapter pour les étudiants)
+\input{chapitres/constantes.tex}
+
+% Entête et pieds de page (A ADAPTER)
+\pagestyle{empty}
+\usepackage{fancyhdr}
+\setlength{\headheight}{27.06pt}
+\pagestyle{fancy}
+% Entête :
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[L]{Labo\nbrlabo: \titre} 
+\fancyhead[R]{Rapport de laboratoire} 
+% Pied de page
+\fancyfoot{} % clear all footer fields
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[R]{Page \thepage} 
+\fancyfoot[L]{HEIG-VD | \nomAuteur }
+
+\setlength{\parindent}{0pt}
+
+% Ajouts de contenu : figures vectorielles et références.
+\usetikzlibrary{arrows.meta,positioning,calc}
+\emergencystretch=2em
+\renewcommand{\arraystretch}{1.15}
+\hypersetup{hidelinks}
+% debut du corps du rapport 
+\begin{document}	
+	% première page
+	\input{chapitres/0_PageGarde}
+	% enlève le numero sur la premiere page
+	% En-têtes du modèle conservés pour le corps du rapport.
+	% Pagination continue après la couverture et la table des matières.
+	\newpage
+	
+
+    \input{chapitres/1_Introduction}
+    \input{chapitres/2_CahierDesCharges}
+    \input{chapitres/3_Architecture}
+    \input{chapitres/4_Driver}
+    \input{chapitres/5_Snubber}
+    \input{chapitres/6_ProtectionsEtComposants}
+    \input{chapitres/7_Conclusion}
+
+    
+	%Section pour la signature
+	\section*{Signatures}
+    \addcontentsline{toc}{section}{Signatures}
+  
+    Yverdon-les-Bains le \today \\
+    \begin{center}
+      \nomAuteur
+    \end{center}
+  
+	% si des annexes sont nécessaires ajouter : 
+	% \section{Annexes}
+	% Changement de notation en lettre : 
+	%\appendix
+	% insertion d'une nouvelle page
+	%\newpage
+	% Ajouter un fichier latec dans le fichier courant
+	%\input{Chapitres/cdc.tex}
+	
+    \clearpage\appendix
+    \input{chapitres/8_annexes}
+    %Fin du document
+    \end{document}
+
+
